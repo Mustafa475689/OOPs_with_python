@@ -116,17 +116,23 @@
 
 # 3 Encapsulation...
 class Factory:
-    k = "Karachi"
-
+    k = "Karachi" # public 
+    _h = "Hyderabad" # Protected 
+    __n = "Nazimabad"  # Private
     def show(self):
         print("Welcome to Karachi")
+        print(Factory.__n) # you can access private attribute by printing this in its own class and then call outside
 
 
 class Shop(Factory):
     def show(self):
+        print(super()._h)
         print(super().k)
+        # print(super().__n) this line will give you error beacuse it is a private attribute so you can not use it outsideclass
 
 obj = Shop()
+fac = Factory()
+fac.show()
 obj.show()
 
 
