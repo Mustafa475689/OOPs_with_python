@@ -78,39 +78,56 @@
 # obj = Human()
 # obj.show()
 
-# Q) Create a parent class called Animal with a method named make_sound() that prints: Now create the following child classes: 
-# Create one object of each class.
-
-class Animal:
-    def make_sound(self):
-        print("Animal makes a sound")
+# Duck typing..
+# class Animal:
+#     def make_sound(self):
+#         print("Animal makes a sound")
 
 
-# Child Class - Dog
-class Dog(Animal):
-    def make_sound(self):
-        print("Dog barks: Woof Woof!")
+# # Child Class - Dog
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("Dog barks: Woof Woof!")
 
 
-# Child Class - Cat
-class Cat(Animal):
-    def make_sound(self):
-        print("Cat meows: Meow!")
+# # Child Class - Cat
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Cat meows: Meow!")
 
 
-# Child Class - Cow
-class Cow(Animal):
-    def make_sound(self):
-        print("Cow moos: Moo!")
+# # Child Class - Cow
+# class Cow(Animal):
+#     def make_sound(self):
+#         print("Cow moos: Moo!")
 
-# Creating Objects
-animal = Animal()
-dog = Dog()
-cat = Cat()
-cow = Cow()
+# # Creating Objects
+# animal = Animal()
+# dog = Dog()
+# cat = Cat()
+# cow = Cow()
 
-# Calling Methods
-animal.make_sound()
-dog.make_sound()
-cat.make_sound()
-cow.make_sound()     
+# # Calling Methods
+# animal.make_sound()
+# dog.make_sound()
+# cat.make_sound()
+# cow.make_sound()     
+# ...
+
+# 3 Encapsulation...
+class Factory:
+    k = "Karachi"
+
+    def show(self):
+        print("Welcome to Karachi")
+
+
+class Shop(Factory):
+    def show(self):
+        print(super().k)
+
+obj = Shop()
+obj.show()
+
+
+# ...
