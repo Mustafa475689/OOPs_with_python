@@ -62,11 +62,20 @@
 # ...
 
 # Map ............................. we can also use normal functions to in map
-num = [1,2,3,4,5]
-check = map(lambda x: "even" if x % 2==0 else "odd", num )
-print(list(check))
+# num = [1,2,3,4,5]
+# check = map(lambda x: "even" if x % 2==0 else "odd", num )
+# print(list(check))
 # ...
 
 # Filter ............................
+def even(x):
+    if x % 2 == 0: 
+        return True
+    else:
+        return False
 
-# 
+numbers = [1,2,3,4,5,6,7]
+
+find = filter(even, numbers) # Filter works on true and false. it itrates it and provide the right answer. There is no need to use normal functions you can also use lambda functions to filter
+print(list(find))
+# ...
