@@ -1,4 +1,5 @@
-#  pillars of OOPs ///////////
+from abc import ABC, abstractmethod
+# pillars of OOPs ///////////
 # Inheritance..
 # Parent Class
 # class Car:
@@ -115,25 +116,61 @@
 # ...
 
 # 3 Encapsulation...
-class Factory:
-    k = "Karachi" # public 
-    _h = "Hyderabad" # Protected 
-    __n = "Nazimabad"  # Private
-    def show(self):
-        print("Welcome to Karachi")
-        print(Factory.__n) # you can access private attribute by printing this in its own class and then call outside
+# class Factory:
+#     k = "Karachi" # public 
+#     _h = "Hyderabad" # Protected 
+#     __n = "Nazimabad"  # Private
+#     def show(self):
+#         print("Welcome to Karachi")
+#         print(Factory.__n) # you can access private attribute by printing this in its own class and then call outside
 
 
-class Shop(Factory):
-    def show(self):
-        print(super()._h)
-        print(super().k)
-        # print(super().__n) this line will give you error beacuse it is a private attribute so you can not use it outsideclass
+# class Shop(Factory):
+#     def show(self):
+#         print(super()._h)
+#         print(super().k)
+#         # print(super().__n) this line will give you error beacuse it is a private attribute so you can not use it outsideclass
 
-obj = Shop()
-fac = Factory()
-fac.show()
-obj.show()
+# obj = Shop()
+# fac = Factory()
+# fac.show()
+# obj.show()
+# ...
 
+# Abstraction..
+
+class abstract(ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass 
+
+    @abstractmethod
+    def area(self):
+        pass
+
+
+class Square(abstract):
+    def __init__(self, side):
+        self.side = side
+    
+    def perimeter(self):
+        print("I have created")
+
+    def area(self):
+        print("this is an area")
+
+
+class Circle(abstract):
+    def __init__(self, radius):
+        self.radius =radius
+
+    def perimeter(self):
+        print("I have created")
+
+    def area(self):
+        print("this is an area")
+
+circle = Circle(7)
+sqr = Square(5)
 
 # ...
