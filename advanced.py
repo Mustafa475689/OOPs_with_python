@@ -53,3 +53,10 @@
 # s = {i*i for i in range(1, 21) if i % 2 == 0}
 # print(s)
 # ...
+
+# Lambda functions ..................
+# cube = lambda i : i**3
+# print(cube(2))
+# checkEven = lambda i : "Even" if i % 2 == 0 else "Odd"
+# print(checkEven(201021))
+# ...
