@@ -7,9 +7,13 @@ class Animal:
         return(f"hello how are you {self.name}")
 
     def __add__(self, other):
-        return(f"Your sum of ages are {self.age + other.age }")
+        sum = 0 
+        for i in other:
+            sum = sum + i.age       
+        return(f"Your sum of ages are {self.age + sum}")
 
 
 ani = Animal("Lion", 24)
-ano = Animal("dolfine", 21)
-print(ani + ano)
+ano = Animal("Dolfine", 21)
+ane = Animal("Tiger", 5)
+print(ani + (ano, ane))
