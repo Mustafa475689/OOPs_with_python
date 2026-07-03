@@ -60,3 +60,13 @@
 # checkEven = lambda i : "Even" if i % 2 == 0 else "Odd"
 # print(checkEven(201021))
 # ...
+
+# Map ............................. we can also use normal functions to in map
+num = [1,2,3,4,5]
+check = map(lambda x: "even" if x % 2==0 else "odd", num )
+print(list(check))
+# ...
+
+# Filter ............................
+
+# 
